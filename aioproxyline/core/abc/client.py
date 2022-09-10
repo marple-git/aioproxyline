@@ -23,7 +23,10 @@ class BaseAPIClient(abc.ABC):
         async with ClientSession() as session:
             params = self._delete_none(params or {})
             request_url = self._get_request_url(method)
-            response = await session.request(method.http_method, request_url, data=params)
+            if method.http_method == 'GET':
+                response = await session.get(request_url, params=params)
+            else:
+                response = await session.post(request_url, data=params)
             json = await response.json()
             if response.status == 403:
                 APIError.detect(json['detail'])
