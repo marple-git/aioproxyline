@@ -1,8 +1,8 @@
 [![Downloads](https://pepy.tech/badge/aioproxyline)](https://pepy.tech/project/aioproxyline)
 [![Downloads](https://pepy.tech/badge/aioproxyline/month)](https://pepy.tech/project/aioproxyline)
 [![Downloads](https://pepy.tech/badge/aioproxyline/week)](https://pepy.tech/project/aioproxyline)
-[![Code Quality Score](https://api.codiga.io/project/34377/score/svg)](https://api.codiga.io/project/34377/score/svg)
-[![Code Grade](https://api.codiga.io/project/34377/status/svg)](https://api.codiga.io/project/34377/status/svg)
+[![Code Quality Score](https://api.codiga.io/project/34554/score/svg)](https://api.codiga.io/project/34554/score/svg)
+[![Code Grade](https://api.codiga.io/project/34554/status/svg)](https://api.codiga.io/project/34554/status/svg)
 
 ## 🔗 Links
 * 🎓 **Documentation:** [*CLICK*](https://aioproxyline.readthedocs.io/en/latest/)

@@ -7,4 +7,3 @@ from .proxy import GetProxyList, RenewProxy
 __all__ = ['APIMethod', 'GetBalance', 'GetProxyList', 'GetOrders',
            'RenewProxy', 'OrderProxy', 'GetOrderPrice', 'GetCountries',
            'GetIPs', 'GetIPsCount']
-
