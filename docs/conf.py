@@ -49,3 +49,6 @@ texinfo_documents = [
         'Miscellaneous',
     ),
 ]
+
+autoclass_content = "both"
+autodoc_member_order = "bysource"
