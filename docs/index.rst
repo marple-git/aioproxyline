@@ -1,6 +1,6 @@
 ..
 
-Contents
+Welcome to aioproxyline documentation.
 =========
 .. toctree::
    installation

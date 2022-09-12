@@ -7,9 +7,10 @@ release = '1.0'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autodoc.typehints',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.mathjax',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.viewcode',
 ]
 
 templates_path = ['_templates']
