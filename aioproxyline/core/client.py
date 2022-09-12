@@ -127,7 +127,8 @@ class ProxyLine(BaseAPIClient, ABC):
             'coupon': coupon
         }
         result = await self._send_request(OrderProxy, data)
-        return parse_obj_as(List[ProxyInfo], result)
+        modified_json = self._modify_renew_proxy_json(result)
+        return parse_obj_as(List[ProxyInfo], modified_json)
 
     async def get_order_price(self, proxy_type: ProxyType, ip_version: ProxyProtocol, country: str,
                               period: int, quantity: int, coupon: Optional[str] = None,
