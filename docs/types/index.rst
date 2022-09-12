@@ -1,5 +1,5 @@
 Types
-==================
+============
 
 .. autoclass:: aioproxyline.types.Balance
     :members:

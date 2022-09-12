@@ -1,9 +1,9 @@
 Examples
-===========
+=============
 
 
 How to get account balance?
--------------------------------
+------------------------------
 
 
 .. code-block:: python
@@ -20,7 +20,7 @@ How to get account balance?
     asyncio.run(get_balance(api_token='my_token'))
 
 How to get proxy list?
-------------------------------------------
+---------------------------------
 
 
 .. code-block:: python
@@ -38,7 +38,7 @@ How to get proxy list?
     asyncio.run(get_proxies(api_token='my_token'))
 
 How to get my orders?
-------------------------
+-----------------------
 
 
 .. code-block:: python
@@ -57,7 +57,7 @@ How to get my orders?
 
 
 How to renew proxy?
------------------------------------------
+--------------------------------
 
 
 .. code-block:: python
@@ -75,7 +75,7 @@ How to renew proxy?
     asyncio.run(renew_proxy(api_token='my_token', operation_id=551166)
 
 How to order proxy?
------------------------------------------
+----------------------------
 
 
 .. code-block:: python
@@ -96,7 +96,7 @@ How to order proxy?
     asyncio.run(order_proxy(api_token='my_token')
 
 How to get order price?
------------------------------------------
+--------------------------------
 
 
 .. code-block:: python
@@ -119,7 +119,7 @@ How to get order price?
     asyncio.run(get_order_price(api_token='my_token')
 
 How to get available countries with cities?
------------------------------------------
+---------------------------------------------
 
 
 .. code-block:: python
@@ -140,7 +140,7 @@ How to get available countries with cities?
     asyncio.run(get_countries(api_token='my_token')
 
 How to get IPs?
------------------------------------------
+----------------------------
 
 
 .. code-block:: python
@@ -162,7 +162,7 @@ How to get IPs?
     asyncio.run(get_ips(api_token='my_token')
 
 How to get IPs count?
------------------------------------------
+---------------------------------
 
 
 .. code-block:: python

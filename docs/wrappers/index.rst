@@ -1,5 +1,5 @@
 Wrapper
-===================
+==================
 
 .. autoclass:: aioproxyline.core.client.ProxyLine
     :members:

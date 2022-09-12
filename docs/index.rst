@@ -1,7 +1,7 @@
 ..
 
 Welcome to aioproxyline documentation.
-=========
+=======================================
 .. toctree::
    installation
    getting-started/index
