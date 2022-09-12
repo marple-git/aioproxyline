@@ -162,7 +162,7 @@ How to get IPs?
     asyncio.run(get_ips(api_token='my_token')
 
 How to get IPs count?
----------------------------------
+-----------------------------
 
 
 .. code-block:: python
