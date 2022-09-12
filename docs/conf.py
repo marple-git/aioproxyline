@@ -24,6 +24,8 @@ html_static_path = ['_static']
 source_suffix = '.rst'
 master_doc = 'index'
 
+add_function_parentheses = True
+
 rst_prolog = """
 .. role:: pycode(code)
    :language: python3
@@ -34,6 +36,7 @@ latex_documents = [
 ]
 
 man_pages = [(master_doc, project, f'{project} Documentation', [author], 1)]
+
 
 texinfo_documents = [
     (
