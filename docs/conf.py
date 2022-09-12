@@ -1,7 +1,7 @@
 project = 'aioproxyline'
 copyright = '2022, Marple'
 author = 'Marple'
-release = '1.0'
+release = '1.1.1'
 
 
 extensions = [
