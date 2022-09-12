@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import Union
 
 
 class ProxyStatus(str, Enum):
@@ -7,14 +8,14 @@ class ProxyStatus(str, Enum):
     DELETED = "deleted"
 
 
-class ProxyType(str, Enum):
+class ProxyType(Enum):
     DEDICATED = 'dedicated'
     SHARED = 'shared'
 
 
 class ProxyProtocol(int, Enum):
-    IP_V4 = 4
-    IP_V6 = 6
+    IPv4 = 4
+    IPv6 = 6
 
 
 class ProxyFormat(str, Enum):

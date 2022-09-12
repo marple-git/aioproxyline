@@ -1,10 +1,13 @@
 from .balance import Balance
 from .countries import Countries
-from .order import OrderPrice
+from .order import OrderPrice, Order
 from .enum import ProxyStatus, ProxyProtocol, ProxyType, ProxyFormat
 from .ips import IPs, IPsCount
+from .proxy_list import ProxyList, ProxyInfo
 
 __all__ = ['Balance', 'ProxyStatus', 'ProxyProtocol', 'ProxyType',
-           'Countries', 'ProxyFormat', 'IPs', 'IPsCount', 'OrderPrice']
+           'Countries', 'ProxyFormat', 'IPs', 'IPsCount', 'OrderPrice', 'ProxyList',
+           'Order', 'ProxyInfo']
+
 
 

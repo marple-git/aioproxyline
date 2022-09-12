@@ -63,3 +63,24 @@ Types
     :member-order: bysource
     :special-members: __init__
     :undoc-members: True
+
+.. autoclass:: aioproxyline.types.Order
+    :members:
+    :show-inheritance:
+    :member-order: bysource
+    :special-members: __init__
+    :undoc-members: True
+
+.. autoclass:: aioproxyline.types.ProxyInfo
+    :members:
+    :show-inheritance:
+    :member-order: bysource
+    :special-members: __init__
+    :undoc-members: True
+
+.. autoclass:: aioproxyline.types.ProxyList
+    :members:
+    :show-inheritance:
+    :member-order: bysource
+    :special-members: __init__
+    :undoc-members: True

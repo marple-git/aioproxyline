@@ -1,7 +1,7 @@
 import abc
 from typing import Optional, Type
 
-from aiohttp import ClientSession
+from aiohttp import ClientSession, ContentTypeError
 
 from ..methods.base import APIMethod
 from ...exceptions import APIError
@@ -27,9 +27,15 @@ class BaseAPIClient(abc.ABC):
                 response = await session.get(request_url, params=params)
             else:
                 response = await session.post(request_url, data=params)
-            json = await response.json()
-            if response.status == 403:
-                APIError.detect(json['detail'])
+            try:
+                json = await response.json()
+            except ContentTypeError:
+                raise APIError('Blocked by website ddos guard.')
+            if response.status in [403, 400]:
+                if json.get('detail'):
+                    APIError.detect(json['detail'])
+                else:
+                    APIError.detect(str(json))
             return json
 
     def _get_request_url(self, method: Type[APIMethod]) -> str:

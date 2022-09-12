@@ -1,7 +1,7 @@
 AioProxyLine
 ===================
 
-.. autoclass:: aioproxyline.ProxyLine
+.. autoclass:: aioproxyline.core.client.ProxyLine
     :members:
     :show-inheritance:
     :member-order: bysource

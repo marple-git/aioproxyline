@@ -1,4 +1,5 @@
-from typing import List
+from datetime import datetime
+from typing import List, Union, Optional
 
 from pydantic import BaseModel, Field
 
@@ -18,3 +19,7 @@ class OrderPrice(BaseModel):
     price: float = Field(..., alias='amount')
     data: PriceData
 
+
+class Order(BaseModel):
+    id: int
+    date: datetime
