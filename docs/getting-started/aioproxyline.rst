@@ -34,7 +34,6 @@ How to get proxy list?
             proxies = await client.get_proxies()
 
 
-
     asyncio.run(get_proxies(api_token='my_token'))
 
 How to get my orders?
@@ -50,7 +49,6 @@ How to get my orders?
     async def get_orders(api_token: str) -> None:
         async with ProxyLine(api_token=api_token) as client:
             orders = await client.get_orders()
-
 
 
     asyncio.run(get_orders(api_token='my_token'))
@@ -71,7 +69,6 @@ How to renew proxy?
             await client.renew_proxy(proxy=proxy_id, period=period)
 
 
-
     asyncio.run(renew_proxy(api_token='my_token', operation_id=551166)
 
 How to order proxy?
@@ -90,7 +87,6 @@ How to order proxy?
             proxy = await client.order_proxy(proxy_type=ProxyType.DEDICATED,
                                              ip_version=ProxyProtocol.IPv4, country="ru",
                                              period=30)
-
 
 
     asyncio.run(order_proxy(api_token='my_token')
@@ -114,8 +110,6 @@ How to get order price?
             print(proxy) # price=1.77 data=PriceData(ip_list=[], period=30, country='ru', type=<ProxyType.DEDICATED: 'dedicated'>, ip_version=<ProxyProtocol.IP_V4: 4>, quantity=1)
 
 
-
-
     asyncio.run(get_order_price(api_token='my_token')
 
 How to get available countries with cities?
@@ -132,9 +126,6 @@ How to get available countries with cities?
         async with ProxyLine(api_token=api_token) as client:
             countries = await client.get_countries()
             print(countries) # [Countries(code='ru', name='Russia', cities=[Cities(id=29, name='Astrakhan'), Cities(id=64, name='Belgorod')
-
-
-
 
 
     asyncio.run(get_countries(api_token='my_token')
@@ -156,9 +147,6 @@ How to get IPs?
             print(ips) # [IPs(id=10271, ip='45.149.*.*'), IPs(id=14428, ip='45.156.*.*'), IPs(id=14527, ip='45.153.*.*'), ...]
 
 
-
-
-
     asyncio.run(get_ips(api_token='my_token')
 
 How to get IPs count?
@@ -176,9 +164,6 @@ How to get IPs count?
         async with ProxyLine(api_token=api_token) as client:
             ips = await client.get_ips_count(ProxyType.DEDICATED, ProxyProtocol.IP_V4, country='ru')
             print(ips.count) # 1000
-
-
-
 
 
     asyncio.run(get_ips(api_token='my_token')
