@@ -8,6 +8,9 @@ from ...exceptions import APIError
 
 
 class BaseAPIClient(abc.ABC):
+    """
+    Base API Client
+    """
     BASE_URL = 'https://panel.proxyline.net/api'
 
     def __init__(self, api_key: str):
@@ -29,8 +32,8 @@ class BaseAPIClient(abc.ABC):
                 response = await session.post(request_url, data=params)
             try:
                 json = await response.json()
-            except ContentTypeError:
-                raise APIError('Blocked by website ddos guard.')
+            except ContentTypeError as exception:
+                raise APIError('Blocked by website ddos guard.') from exception
             if response.status in [403, 400]:
                 if json.get('detail'):
                     APIError.detect(json['detail'])

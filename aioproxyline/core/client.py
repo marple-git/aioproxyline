@@ -4,16 +4,22 @@ from typing import Optional, List, Union
 
 from pydantic import parse_obj_as
 
-from .methods import GetBalance, GetProxyList, GetOrders, RenewProxy, OrderProxy, GetCountries, GetIPs, GetIPsCount, \
+from .methods import GetBalance, GetProxyList, GetOrders, \
+    RenewProxy, OrderProxy, GetCountries, GetIPs, GetIPsCount, \
     GetOrderPrice
 from ..core.abc import BaseAPIClient
-from ..types import Balance, ProxyStatus, ProxyType, ProxyProtocol, Countries, ProxyFormat, IPs, IPsCount, OrderPrice, \
+from ..types import Balance, ProxyStatus, ProxyType, ProxyProtocol, \
+    Countries, ProxyFormat, IPs, IPsCount, OrderPrice, \
     ProxyList, ProxyInfo, Order
 
 
 class ProxyLine(BaseAPIClient, ABC):
+    """
+    ProxyLine API Wrapper
+    """
     def __init__(self, api_key: str):
         super().__init__(api_key)
+        self.api_key = api_key
 
     async def get_balance(self) -> Balance:
         """
@@ -24,10 +30,14 @@ class ProxyLine(BaseAPIClient, ABC):
         result = await self._send_request(GetBalance)
         return Balance(**result)
 
-    async def get_proxy_list(self, status: Optional[ProxyStatus] = None, proxy_type: Optional[ProxyType] = None,
-                             ip_version: Optional[ProxyProtocol] = None, country: Optional[str] = None,
-                             date_end_after: Optional[datetime] = None, date_end_before: Optional[datetime] = None,
-                             date_after: Optional[datetime] = None, date_before: Optional[datetime] = None,
+    async def get_proxy_list(self, status: Optional[ProxyStatus] = None,
+                             proxy_type: Optional[ProxyType] = None,
+                             ip_version: Optional[ProxyProtocol] = None,
+                             country: Optional[str] = None,
+                             date_end_after: Optional[datetime] = None,
+                             date_end_before: Optional[datetime] = None,
+                             date_after: Optional[datetime] = None,
+                             date_before: Optional[datetime] = None,
                              orders: Optional[Union[List[int], int]] = None,
                              proxy_format: Optional[ProxyFormat] = None,
                              limit: Optional[int] = 200,

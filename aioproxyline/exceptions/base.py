@@ -1,8 +1,12 @@
-class _MatchErrorMixin:
-    match = ''
-    text = None
+from typing import Optional, List
 
-    __subclasses = []
+
+class _MatchErrorMixin:
+    """Base class for all exceptions raised by this module."""
+    match = ''
+    text: Optional[str] = None
+
+    __subclasses: List = []
 
     def __init_subclass__(cls, **kwargs):
         super(_MatchErrorMixin, cls).__init_subclass__(**kwargs)
@@ -29,6 +33,11 @@ class _MatchErrorMixin:
 
     @classmethod
     def detect(cls, description):
+        """
+        Find existing exception
+        :param description: error description
+        :return:
+        """
         description = description.lower()
         for err in cls.__subclasses:
             if err is cls:
@@ -39,4 +48,7 @@ class _MatchErrorMixin:
 
 
 class APIError(Exception, _MatchErrorMixin):
+    """
+    API Error
+    """
     pass

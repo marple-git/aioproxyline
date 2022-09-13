@@ -1,4 +1,4 @@
-from aioproxyline.core.methods import APIMethod
+from .base import APIMethod
 
 
 class GetCountries(APIMethod):
