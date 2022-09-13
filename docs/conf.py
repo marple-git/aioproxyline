@@ -26,7 +26,7 @@ master_doc = 'index'
 
 add_function_parentheses = True
 
-rst_prolog = f"""
+rst_prolog = """
 .. role:: pycode(code)
    :language: python3
 """
