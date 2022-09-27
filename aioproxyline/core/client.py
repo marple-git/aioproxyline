@@ -24,6 +24,7 @@ class ProxyLine(BaseAPIClient, ABC):
     async def get_balance(self) -> Balance:
         """
         Get balance
+
         :return: Account balance information
         :rtype: Balance
         """
@@ -44,6 +45,7 @@ class ProxyLine(BaseAPIClient, ABC):
                              offset: Optional[int] = 0) -> ProxyList:
         """
         Get proxy list
+
         :param status: Status
         :param proxy_type: Type
         :param ip_version: IP version
@@ -81,6 +83,7 @@ class ProxyLine(BaseAPIClient, ABC):
                          date_before: Optional[datetime] = None) -> List[Order]:
         """
         Get Orders
+
         :param date_after: Date after
         :param date_before: Date before
         :return: List of orders
@@ -97,6 +100,7 @@ class ProxyLine(BaseAPIClient, ABC):
                           coupon: Optional[str] = None) -> List[ProxyInfo]:
         """
         Renew proxy
+
         :param proxy: Proxy ID
         :param period: Renew period
         :param coupon: Coupon
@@ -117,6 +121,7 @@ class ProxyLine(BaseAPIClient, ABC):
                           ip_list: Optional[List[int]] = None) -> List[ProxyInfo]:
         """
         Order proxy
+
         :param quantity: Quantity
         :param ip_list: IP List received from ips method
         :param proxy_type: Proxy Type
@@ -145,6 +150,7 @@ class ProxyLine(BaseAPIClient, ABC):
                               ip_list: Optional[List[int]] = None) -> OrderPrice:
         """
         Get Proxy Order Price
+
         :param quantity: Quantity
         :param ip_list: IP List received from ips method
         :param proxy_type: Proxy Type
@@ -170,6 +176,7 @@ class ProxyLine(BaseAPIClient, ABC):
     async def get_countries(self) -> List[Countries]:
         """
         Get countries
+
         :return: Countries info
         :rtype: List[Countries]
         """
@@ -180,6 +187,7 @@ class ProxyLine(BaseAPIClient, ABC):
                       city: Optional[str] = None) -> List[IPs]:
         """
         Get IPs
+
         :param city: City
         :param proxy_type: Proxy Type
         :param ip_version: IP version
@@ -199,7 +207,8 @@ class ProxyLine(BaseAPIClient, ABC):
     async def get_ips_count(self, proxy_type: ProxyType, ip_version: ProxyProtocol, country: str,
                             city: Optional[str] = None) -> IPsCount:
         """
-        Get IPs Count
+        Get amount of available ips
+
         :param city: City
         :param proxy_type: Proxy Type
         :param ip_version: IP version
